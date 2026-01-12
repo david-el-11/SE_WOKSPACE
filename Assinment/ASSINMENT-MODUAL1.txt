@@ -57,7 +57,38 @@ the role of user-server In web-communication
 
 client: Initiates a request to the server when interested, Doesn’t communicate directly with other clients
 
-server : Services requests from many client hosts, Doesn’t initiate contract with the clients
+server : Services requests from many client hosts, Doesn’t initiate contract with the client.
+
++------------------+
+|   Client (User)  |
+| (Browser/App)   |
++------------------+
+        |
+        |  HTTP Request
+        v
++------------------+
+|    Internet      |
+| (Network Medium) |
++------------------+
+        |
+        v
++------------------+
+|     Server       |
+| (Web Server /    |
+|  Database)       |
++------------------+
+        |
+        |  HTTP Response (Data/Webpage)
+        v
++------------------+
+|    Internet      |
++------------------+
+        |
+        v
++------------------+
+|   Client (User)  |
+|  Output Screen   |
++------------------+
 -------
 
 Client and Servers
@@ -189,6 +220,7 @@ Software testing is important because it ensures that applications work correctl
 
 Software maintenance isn’t just about fixing bugs—it’s about keeping software relevant, reliable, and resilient over time.
 -------
+
 
 
 
