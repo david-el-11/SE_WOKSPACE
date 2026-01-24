@@ -1,0 +1,245 @@
+1 Overview of C Programming
+THEORY: History and Evolution of C Programming
+
+C programming language was developed by Dennis Ritchie in 1972 at Bell Laboratories. It was created to develop the UNIX operating system. C evolved from earlier languages such as BCPL and B.
+
+C became popular because it combines the features of both high-level and low-level languages. It allows direct memory access using pointers while still being easy to read and write. Over time, C influenced many modern languages such as C++, Java, C#, and Python.
+
+mportance of C Language
+
+Fast execution speed
+
+Portability
+
+System-level programming
+
+Used in OS, compilers, embedded systems
+
+Why C is Still Used Today
+
+Core language for operating systems
+
+Embedded systems development
+
+Game engines
+
+Database systems
+
+LAB: Real-World Applications of C
+
+Operating Systems – UNIX, Linux kernels
+
+Embedded Systems – Washing machines, cars, IoT devices
+
+Game Development – Game engines and graphics libraries
+
+2. #include <stdio.h>
+
+int main()
+{
+    printf("Hello, World!");
+    return 0;
+}
+
+3. Basic Structure of a C Program
+THEORY
+
+A C program consists of:
+
+Header files
+
+main() function
+
+Variables & data types
+
+Statements
+
+Return statement
+
++--------------------+
+| Header Files       |
++--------------------+
+| main() Function    |
+| Variables          |
+| Statements         |
+| return 0;          |
++--------------------+
+
+#include <stdio.h>
+
+int main()
+{
+    int age = 20;
+    float marks = 85.5;
+    char grade = 'A';
+
+    printf("Age: %d\n", age);
+    printf("Marks: %.2f\n", marks);
+    printf("Grade: %c", grade);
+
+    return 0;
+}
+
+4. Operators in C
+THEORY
+
+Types of Operators:
+
+Arithmetic (+, -, *, /, %)
+
+Relational (>, <, ==)
+
+Logical (&&, ||, !)
+
+Assignment (=, +=)
+
+Increment/Decrement (++ , --)
+
+Bitwise (&, |)
+
+Conditional (? :)
+
+#include <stdio.h>
+
+int main()
+{
+    int a, b;
+    printf("Enter two numbers: ");
+    scanf("%d%d", &a, &b);
+
+    printf("Sum: %d\n", a + b);
+    printf("Greater: %d\n", a > b);
+    printf("Logical AND: %d\n", a && b);
+
+    return 0;
+}
+
+5. Control Flow Statements
+THEORY
+
+Decision-making statements:
+
+if
+
+if-else
+
+nested if
+
+switch
+
+Even or Odd + Month Name
+
+#include <stdio.h>
+
+int main()
+{
+    int n, m;
+    scanf("%d", &n);
+
+    if(n % 2 == 0)
+        printf("Even\n");
+    else
+        printf("Odd\n");
+
+    scanf("%d", &m);
+    switch(m)
+    {
+        case 1: printf("January"); break;
+        case 2: printf("February"); break;
+        default: printf("Invalid");
+    }
+    return 0;
+}
+
+6. Looping in C
+THEORY
+Loop	Use
+for	Fixed iterations
+while	Condition based
+do-while	Executes at least once
+
+1 to 10 using Loops
+
+int i=1;
+while(i<=10){ printf("%d ", i++); }
+
+Reverse Number
+
+int n, rev=0;
+while(n>0){
+ rev = rev*10 + n%10;
+ n/=10;
+}
+
+7. Loop Control Statements
+THEORY
+
+break – exits loop
+
+continue – skips iteration
+
+goto – jumps to label
+
+for(int i=1;i<=10;i++){
+ if(i==3) continue;
+ if(i==5) break;
+ printf("%d ", i);
+}
+
+8. Functions in C
+THEORY
+
+Functions improve reusability and modularity.
+
+int fact(int n){
+ if(n==0) return 1;
+ return n*fact(n-1);
+}
+
+9. Arrays in C
+THEORY
+
+Arrays store multiple values of same type.
+
+int a[5]={1,2,3,4,5};
+
+10. Pointers in C
+THEORY
+
+Pointers store address of variables.
+
+int a=10;
+int *p=a;
+*p=20;
+printf("%d", a);
+
+11. Strings in C
+THEORY
+
+String functions: strlen(), strcpy(), strcat(), strcmp()
+
+char s1[20], s2[20];
+strcat(s1, s2);
+
+12. Structures in C
+THEORY
+
+Structures store different data types.
+
+struct student{
+ char name[20];
+ int roll;
+ float marks;
+};
+
+File Handling in C
+THEORY
+
+File handling stores data permanently.
+
+FILE *fp;
+fp = fopen("test.txt","w");
+fprintf(fp,"Hello C");
+fclose(fp);
+.
+
